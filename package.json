@@ -1,24 +1,54 @@
 {
-  "name": "@aabeborn/rules",
-  "version": "0.0.0",
-  "description": "My personal linting and formatting rules",
-  "type": "module",
-  "exports": {
-    "./prettier": "./formatter/prettier.js",
-    "./eslint/base": "./linter/eslint/base",
-    "./eslint/react": "./linter/eslint/react",
-    "./eslint/next": "./linter/eslint/next"
-  },
-  "scripts": {
-    "format": "prettier --write .",
-    "lint": "eslint ."
-  },
-  "keywords": [
-    "ESLint",
-    "Prettier",
-    "formatting",
-    "linting"
-  ],
-  "author": "Andrea Benato",
-  "license": "MIT"
+	"name": "@aabeborn/rules",
+	"version": "0.0.0",
+	"description": "My personal linting and formatting rules",
+	"type": "module",
+	"exports": {
+		"./prettier": "./formatter/prettier.js",
+		"./eslint/base": "./linter/eslint/base.js",
+		"./eslint/react": "./linter/eslint/react.js",
+		"./eslint/next": "./linter/eslint/next.js"
+	},
+	"scripts": {
+		"format": "prettier --write .",
+		"lint": "eslint ."
+	},
+	"files": [
+		"package.json",
+		"Readme.md",
+		"formatter",
+		"linter"
+	],
+	"keywords": [
+		"ESLint",
+		"Prettier",
+		"formatting",
+		"linting"
+	],
+	"author": "Andrea Benato",
+	"license": "MIT",
+	"packageManager": "pnpm@10.0.0+sha512.b8fef5494bd3fe4cbd4edabd0745df2ee5be3e4b0b8b08fa643aa3e4c6702ccc0f00d68fa8a8c9858a735a0032485a44990ed2810526c875e416f001b17df12b",
+	"devDependencies": {
+		"eslint": "^9.18.0",
+		"prettier": "^3.4.2",
+		"typescript": "^5.7.3"
+	},
+	"peerDependencies": {
+		"eslint": "^9.18.0",
+		"prettier": "^3.4.2",
+		"typescript": "^5.7.3"
+	},
+	"dependencies": {
+		"@eslint/js": "^9.18.0",
+		"@next/eslint-plugin-next": "^15.1.5",
+		"@vitest/eslint-plugin": "^1.1.25",
+		"eslint-config-prettier": "^10.0.1",
+		"eslint-plugin-prettier": "^5.2.3",
+		"eslint-plugin-react": "^7.37.4",
+		"eslint-plugin-react-compiler": "19.0.0-beta-e552027-20250112",
+		"eslint-plugin-react-hooks": "^5.1.0",
+		"eslint-plugin-unicorn": "^56.0.1",
+		"prettier-plugin-tailwindcss": "^0.6.10",
+		"typescript-eslint": "^8.20.0"
+	}
 }
