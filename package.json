@@ -3,6 +3,7 @@
 	"version": "0.0.0",
 	"description": "My personal linting and formatting rules",
 	"type": "module",
+    "private": false,
 	"exports": {
 		"./prettier": "./formatter/prettier.js",
 		"./eslint/base": "./linter/eslint/base.js",
