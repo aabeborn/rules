@@ -1,0 +1,24 @@
+{
+  "name": "@aabeborn/rules",
+  "version": "0.0.0",
+  "description": "My personal linting and formatting rules",
+  "type": "module",
+  "exports": {
+    "./prettier": "./formatter/prettier.js",
+    "./eslint/base": "./linter/eslint/base",
+    "./eslint/react": "./linter/eslint/react",
+    "./eslint/next": "./linter/eslint/next"
+  },
+  "scripts": {
+    "format": "prettier --write .",
+    "lint": "eslint ."
+  },
+  "keywords": [
+    "ESLint",
+    "Prettier",
+    "formatting",
+    "linting"
+  ],
+  "author": "Andrea Benato",
+  "license": "MIT"
+}
