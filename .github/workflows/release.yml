@@ -11,7 +11,10 @@ jobs:
             - uses: actions/setup-node@v4
               with:
                   node-version: 'latest'
-            - run: npm ci
+            - uses: pnpm/action-setup@v4
+              with:
+                  version: 10
+            - run: pnpm install --frozen-lockfile
             - uses: JS-DevTools/npm-publish@v3
               with:
                   token: ${{ secrets.NPM_TOKEN }}
