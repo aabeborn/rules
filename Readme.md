@@ -6,15 +6,20 @@ The configuration supports linting via `eslint` (**flat configuration**) and for
 
 ### Supported frameworks and libraries
 
-    - **Frontend**
+    - Frontend
         - React
         - NextJs
         - Tailwind (on prettier, waiting for eslint plugin to add supports for v4)
 
-    - **Utilities**
+    - Utilities
         - Vitest
 
 ### Installation
+
+Add to your `.npmrc` file the following lines to use github registry:
+```bash
+@aabeborn:registry=https://npm.pkg.github.com
+```
 
 Use your preferred package manager to install the dependencies.
 
@@ -27,9 +32,9 @@ Then you can import the configuration in your `eslint.config.js` and `prettier.c
 ```javascript
 /* ESLint configuration file */
 /* Available configurations 
-    - Base
-    - NextJs
-    - React
+    - base
+    - next
+    - react
 
     Utilities are added automatically.
 */
@@ -40,11 +45,7 @@ export default config
 
 ```javascript
 /* Prettier configuration file */
-import config from '@aabvorn/rules/prettier'
+import config from '@aabeborn/rules/prettier'
 
 export default config
-```
-
-```
-
 ```
