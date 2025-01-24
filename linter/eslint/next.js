@@ -20,9 +20,9 @@ const config = [
 			'react-compiler/react-compiler': 'error'
 		}
 	},
-    {
-        ignores: ['.next/*']
-    }
+	{
+		ignores: ['.next/*']
+	},
 	...base
 ]
 
