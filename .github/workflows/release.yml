@@ -14,6 +14,7 @@ jobs:
             - uses: oven-sh/setup-bun@v2
               with:
                   bun-version: 'latest'
+            - run: bun install --frozen-lockfile
             - uses: JS-DevTools/npm-publish@v3
               with:
                   token: ${{ secrets.GITHUB_TOKEN }}
