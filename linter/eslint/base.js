@@ -7,11 +7,8 @@ import vitest from '@vitest/eslint-plugin'
 /* @type {import('eslint').Linter.Config} */
 const config = [
 	eslint.configs.recommended,
-	{
-		...ts.configs.strictTypeChecked,
-		files: ['**/*.ts', '**/*.tsx']
-	},
-	{ ...ts.configs.stylisticTypeChecked, files: ['**/*.ts', '**/*.tsx'] },
+	...ts.configs.strictTypeChecked,
+	...ts.configs.stylisticTypeChecked,
 	{
 		files: ['**/*.ts', '**/*.tsx'],
 		languageOptions: {
@@ -23,6 +20,10 @@ const config = [
 				tsconfigRootDir: import.meta.dirname
 			}
 		}
+	},
+	{
+		files: ['**/*.js'],
+		...ts.configs.disableTypeChecked
 	},
 	unicorn.configs['flat/recommended'],
 	{
