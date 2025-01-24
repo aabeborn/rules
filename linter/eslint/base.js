@@ -13,10 +13,7 @@ const config = [
 		files: ['**/*.ts', '**/*.tsx'],
 		languageOptions: {
 			parserOptions: {
-				projectService: {
-					allowDefaultProject: ['*.js'],
-					defaultProject: true
-				},
+				project: './tsconfig.json',
 				tsconfigRootDir: import.meta.dirname
 			}
 		}
