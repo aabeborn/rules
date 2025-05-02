@@ -11,11 +11,11 @@ jobs:
             packages: write
         steps:
             - uses: actions/checkout@v4
-            - uses: oven-sh/setup-bun@v2
+            - uses: pnpm/action-setup@v2
               with:
-                  bun-version: 'latest'
-            - run: bun install --frozen-lockfile
-            - run: bun lint
+                  version: 'latest'
+            - run: pnpm install --frozen-lockfile
+            - run: pnpm lint
             - uses: JS-DevTools/npm-publish@v3
               with:
                   token: ${{ secrets.GITHUB_TOKEN }}
